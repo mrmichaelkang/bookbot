@@ -12,3 +12,12 @@ def get_char_count(str):
             char_dict[char] = 1
 
     return char_dict
+
+
+def generate_report_format(dict):
+    report_list = []
+
+    for key, value in dict.items():
+        report_list.append({"char": key, "num": value})
+
+    return sorted(report_list, key=lambda k: k["num"], reverse=True)
